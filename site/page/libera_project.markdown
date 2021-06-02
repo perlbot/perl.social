@@ -18,6 +18,20 @@ This is still partly up in the air, as I've yet to decide what the proper system
 
     @perlbot/<title>/<owner_account>
 
+## proposed titles
+
+The proposed titles for ranking the amount of bots being run and cloaked is mostly for fun and has no bearing on any input on the project itself.  The idea is to be whimsical and ecclectic.
+
+
+patrician -> simcop2387  
+... others to be decided  
+burgher -> 2-3 bots?  
+helot -> 1 bot  
+
+## custom titles
+
+We will allow basically any custom title requested, with the option to reject a custom title for any reason.  
+
 # #perlbot-\* channels
 
 The main #perlbot channel is and always will be a dumping ground for bot traffic.  If you need a channel to test a bot in without annoying anyone, it will always be open for it.
