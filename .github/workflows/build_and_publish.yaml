@@ -32,4 +32,9 @@ jobs:
           git config --local user.email 'automated@example.com'
           git config --local user.name  'Github actions'
           git commit -m 'Update rendered site'
-          git push origin published
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'published'
+          directory: 'rendered/'
