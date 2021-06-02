@@ -24,7 +24,7 @@ jobs:
           ./build.sh
       - name: Push rendered files to branch
         run: |
-          cp .git rendered/.git/
+          cp -a .git rendered/.git/
           cd rendered/
           git symbolic-ref HEAD refs/heads/published
           git reset
