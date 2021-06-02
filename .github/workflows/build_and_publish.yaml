@@ -7,6 +7,8 @@ on:
 
 jobs:
   perl-job:
+    env:
+      PUBLISH_BRANCH: 'published'
     runs-on: ['ubuntu-latest']
     container:
       image: perl
@@ -26,7 +28,7 @@ jobs:
         run: |
           cp -a .git rendered/.git/
           cd rendered/
-          git symbolic-ref HEAD refs/heads/published
+          git symbolic-ref HEAD refs/heads/${{ env.PUBLISH_BRANCH }}
           git reset
           git add -A .
           git config --local user.email 'automated@example.com'
@@ -36,6 +38,6 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'published'
+          branch: ${{ env.PUBLISH_BRANCH }}
           directory: 'rendered/'
           force: true
