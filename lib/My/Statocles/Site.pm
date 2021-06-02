@@ -14,7 +14,8 @@ package My::Statocles::Markdent::Compat {
     # We're going to ignore all options
     my $md = Markdent::Simple::Fragment->new();
     my $output = $md->markdown_to_html(
-      markdown => $markdown
+      markdown => $markdown,
+      dialects => ['GitHub', 'Theory'],
     );
 
     return $output;
