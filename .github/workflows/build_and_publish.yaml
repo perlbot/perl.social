@@ -28,4 +28,6 @@ jobs:
           cd rendered/
           git symbolic-ref HEAD refs/heads/published
           git reset
-          git status
+          git add -A .
+          git commit -m 'Update rendered site'
+          git push origin published
