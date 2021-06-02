@@ -4,4 +4,8 @@ set -eux
 
 mkdir rendered/ || echo Rendered directory exists
 
-carton exec 'bash -c "cd site; statocles build && statocles deploy"'
+export PERL5LIB=$PWD/lib:$PWD/local/lib/perl5${PERL5LIB:+:$PERL5LIB}
+export PATH=$PWD/local/bin${PATH:+:$PATH}
+
+cd site
+statocles build && statocles deploy

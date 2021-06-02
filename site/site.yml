@@ -27,7 +27,7 @@
 # deploying, and store global site data like themes and navigation. See
 # Statocles::Site for a full list of attributes and what they do.
 site:
-    $class: 'Statocles::Site'
+    $class: 'My::Statocles::Site'
 
     # title: This is the title of the site, shown in the <title> tag
     title: 'Perlbot open source project'
