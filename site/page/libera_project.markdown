@@ -4,6 +4,8 @@ title: Libera project conventions
 
 # Bot cloaks
 
+[List of all known bots](/page/libera_bots.html)
+
 All bot cloaks will follow this pattern
 
     @perlbot/bot/<owner_account>/<bot_account>
