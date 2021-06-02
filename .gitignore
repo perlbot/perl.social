@@ -3,3 +3,4 @@ extern/
 rendered/
 local/bin
 local/lib
+site/.statocles/
