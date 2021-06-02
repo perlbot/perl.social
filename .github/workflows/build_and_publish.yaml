@@ -1,0 +1,19 @@
+name: CD - Statocles
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  perl-job:
+    container:
+      image: perl
+    strategy:
+      fail-fast: true
+    name: build and publish 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get dependencies
+        run: |
+          carton install
