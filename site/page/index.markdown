@@ -1,11 +1,7 @@
 ---
-title: Main Page
+title: Perlbot project home
 ---
 
-# Welcome To Your Site
+# Welcome to the perlbot project main site
 
-This is your first page. To edit this page, open up <%= $self->path %>
-in your text editor.
-
-[Check the documentation for how to write Statocles
-content](http://preaction.me/statocles/pod/Statocles/Help/Content)
+This is a place for us to document how the perlbot project is run, particularly communities and known bots on IRC
