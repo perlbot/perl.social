@@ -38,6 +38,15 @@ jobs:
         run: |
           cpanm --notest --verbose Carton
           carton install
+      - name: Build site
+        if: github.ref != "refs/heads/${{ env.SITE_BRANCH }}"
+        run: |
+          statocles --lib build
+      - name: Publish site
+        run: |
+          statocles --lib deploy
+        if: github.ref == "refs/heads/${{ env.SITE_BRANCH }}"
+
 #      - name: Run buildscript
 #        run: |
 #          ./build.sh
