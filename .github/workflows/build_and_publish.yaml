@@ -44,6 +44,7 @@ jobs:
       - name: Build site for PR
         if: github.event.name == "pull_request" && github.base_ref == "refs/heads/${{ env.SITE_BRANCH }}"
         run: |
+          echo Detected pull request for pages, doing test build
           cd site/
           statocles --lib build
       - name: Publish site
