@@ -9,4 +9,4 @@ export PUBLISH_BRANCH
 export SITE_BRANCH
 
 cd site
-statocles build
+statocles daemon
