@@ -20,7 +20,7 @@ jobs:
         name: Do checkout
       - name: Setup Perl environment
         run: |
-          echo PERL5LIB="$(pwd)/local/lib/perl5:${PERL5LIB}" >> $GITHUB_ENV
+          echo PERL5LIB="$(pwd)/lib:$(pwd)/local/lib/perl5${PERL5LIB:+:PERL5LIB}" >> $GITHUB_ENV
           echo PERL_VERSION="$(perl -E 'print $^V')" >> $GITHUB_ENV
           cat .env >> $GITHUB_ENV
           echo "$(pwd)/local/bin" >> $GITHUB_PATH
