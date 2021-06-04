@@ -8,4 +8,4 @@ export PERL5LIB=$PWD/lib:$PWD/local/lib/perl5${PERL5LIB:+:$PERL5LIB}
 export PATH=$PWD/local/bin${PATH:+:$PATH}
 
 cd site
-statocles build && statocles deploy
+statocles build

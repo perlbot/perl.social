@@ -7,8 +7,6 @@ on:
 
 jobs:
   perl-job:
-    env:
-      PUBLISH_BRANCH: 'published'
     runs-on: ['ubuntu-latest']
     container:
       image: perl
@@ -17,27 +15,41 @@ jobs:
     name: build and publish 
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Perl environment
+        run: |
+          echo PERL5LIB="$(pwd)/local/lib/perl5:${PERL5LIB}" >> $GITHUB_ENV
+          echo PERL_VERSION="$(perl -E 'print $^V')" >> $GITHUB_ENV
+          cat .env >> $GITHUB_ENV
+          echo "$(pwd)/local/bin" >> $GITHUB_PATH
+      - name: Configure git
+        run: |
+          git branch --track ${{ env.PUBLISH_BRANCH }} origin/${{ env.PUBLISH_BRANCH }}
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: local
+          key: ${{ runner.os }}-cache-deps-${{ env.PERL_VERSION }}-{{ hashFiles('cpanfile') }}
       - name: Get dependencies
         run: |
           cpanm --notest --verbose Carton
           carton install
-      - name: Run buildscript
-        run: |
-          ./build.sh
-      - name: Push rendered files to branch
-        run: |
-          cp -a .git rendered/.git/
-          cd rendered/
-          git symbolic-ref HEAD refs/heads/${{ env.PUBLISH_BRANCH }}
-          git reset
-          git add -A .
-          git config --local user.email 'automated@example.com'
-          git config --local user.name  'Github actions'
-          git commit -m 'Update rendered site'
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.PUBLISH_BRANCH }}
-          directory: 'rendered/'
-          force: true
+#      - name: Run buildscript
+#        run: |
+#          ./build.sh
+#      - name: Push rendered files to branch
+#        run: |
+#          cp -a .git rendered/.git/
+#          cd rendered/
+#          git symbolic-ref HEAD refs/heads/${{ env.PUBLISH_BRANCH }}
+#          git reset
+#          git add -A .
+#          git config --local user.email 'automated@example.com'
+#          git config --local user.name  'Github actions'
+#          git commit -m 'Update rendered site'
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          branch: ${{ env.PUBLISH_BRANCH }}
+#          directory: 'rendered/'
+#          force: true

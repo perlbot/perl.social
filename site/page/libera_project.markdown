@@ -45,7 +45,7 @@ We will allow basically any custom title requested, with the option to reject a 
 An exmaple of this is
 
 | nick       | cloak                         |
-|------------|-------------------------------|
++------------+-------------------------------+
 | simcop2387 | @perlbot/patrician/simcop2387 |
 
 
