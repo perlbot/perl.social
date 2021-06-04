@@ -1,8 +1,10 @@
 # How to customize for your own github pages setup
 
-The way this system works is that it runs statocles in a github action and pushes the rendered site to a different branch on the same repository.  You'll want to set the branch being rendered to in the repository settings in github.  Repository Settings -> Pages -> branch.  This way you can have the project repository in `main` or `master`, the site source in `statocles` and the actual site in the `published` branch.
+Take a look at the .env file to set the branches in use.  The two branches are the one for the source of the site and the branch to publish the site to.
 
-Edit the workflow file .github/workflows/build_and_publish.yaml
+
+
+The way this system works is that it runs statocles in a github action and pushes the rendered site to a different branch on the same repository.  
 
 You'll want to change the PUBLISH_BRANCH env var and the branch used in the on: push: action at the top of the yaml file.
 

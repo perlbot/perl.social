@@ -41,8 +41,8 @@ jobs:
         run: |
           cpanm --notest --verbose Carton
           carton install
-      - name: Build site
-        if: github.ref != "refs/heads/${{ env.SITE_BRANCH }}"
+      - name: Build site for PR
+        if: github.event.name == "pull_request" && github.base_ref == "refs/heads/${{ env.SITE_BRANCH }}"
         run: |
           cd site/
           statocles --lib build
