@@ -45,6 +45,7 @@ jobs:
           statocles --lib build
       - name: Publish site
         run: |
+          git stash -u
           cd site/
           statocles --lib deploy
         if: github.ref == "refs/heads/${{ env.SITE_BRANCH }}"
