@@ -25,7 +25,7 @@ The proposed titles for ranking the amount of bots being run and cloaked is most
 I'm basing this right now on some stuff from the old Advanced Dungeons & Dragons since it meets everything I wanted at the moment.
 
 | Number of bots | Titles (figher) | (magic)   | (cleric)     | (thief)         | (monk)        | (assassin)     | (bard)    |
-|----------------|-----------------|-----------|--------------|-----------------|---------------|----------------|-----------|
++----------------+-----------------+-----------+--------------+-----------------+---------------+----------------+-----------+
 | 0              | supporter       | npc       | villager     | fodder          | bother/sister | thug           | muse      |
 | 1              | veteran         | medium    | acolyte      | apprentice      | novice        | killer         | lyrist    |
 | 2..3           | warrior         | seer      | adept        | footpad         | initiate      | murderer       | sonnateer |

@@ -15,7 +15,7 @@ package My::Statocles::Markdent::Compat {
     my $md = Markdent::Simple::Fragment->new();
     my $output = $md->markdown_to_html(
       markdown => $markdown,
-      dialects => ['GitHub', 'Theory'],
+      dialects => ['Theory', 'GitHub'],
     );
 
     return $output;
