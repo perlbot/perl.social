@@ -41,9 +41,11 @@ jobs:
       - name: Build site
         if: github.ref != "refs/heads/${{ env.SITE_BRANCH }}"
         run: |
+          cd site/
           statocles --lib build
       - name: Publish site
         run: |
+          cd site/
           statocles --lib deploy
         if: github.ref == "refs/heads/${{ env.SITE_BRANCH }}"
 
