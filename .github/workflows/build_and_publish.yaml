@@ -1,12 +1,12 @@
 name: CD - Statocles
 
 on: 
+  pull_request:
   push:
     branches:
       - '*'
     tags-ignore:
       - '*'
-    pull_request:
 
 jobs:
   perl-job:
@@ -15,7 +15,7 @@ jobs:
       image: perl
     strategy:
       fail-fast: true
-    name: build and publish 
+    name: Statocles, build or publish.
     steps:
       - uses: actions/checkout@v2
         with:
@@ -36,20 +36,18 @@ jobs:
         uses: actions/cache@v2
         with:
           path: local
-          key: ${{ runner.os }}-cache-deps-${{ env.PERL_VERSION }}-{{ hashFiles('cpanfile') }}
+          key: ${{ runner.os }}-cache-deps-${{ env.PERL_VERSION }}-${{ hashFiles('cpanfile') }}
       - name: Get dependencies
         run: |
           cpanm --notest --verbose Carton
           carton install
       - name: Build site for PR
-        if: github.event.name == "pull_request" && github.base_ref == "refs/heads/${{ env.SITE_BRANCH }}"
+        if: github.event_name == 'pull_request'
         run: |
-          echo Detected pull request for pages, doing test build
-          cd site/
-          statocles --lib build
+          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/build.sh"
+          bash ${GITHUB_WORKSPACE}/.github/scripts/build.sh
       - name: Publish site
-        if: github.ref == "refs/heads/${{ env.SITE_BRANCH }}"
+        if: github.event_name == 'push'
         run: |
-          git stash -u
-          cd site/
-          statocles --lib deploy
+          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/publish.sh"
+          bash ${GITHUB_WORKSPACE}/.github/scripts/publish.sh
