@@ -14,6 +14,7 @@ title: Libera project list of known bots
 |  meatbot  |  simcop2387  |  @perlbot/bot/simcop2387/meatbot  |  An alternate name for metabot that will be used for dev versions/work for the time being, but eventually as an alternate nick for expanding to more channels  |
 |  farnsworth  |  simcop2387  |  @perlbot/bot/simcop2387/farnsworth  |  A bot that speaks only [Language::Farnsworth](https://metacpan.org/pod/Language::Farnsworth)  |
 |  cubert  |  simcop2387  |  @perlbot/bot/simcop2387/cubert  |  A similar bot to farnsworth that speaks a slightly updated version of [Language::Farnsworth](https://metacpan.org/pod/Language::Farnsworth).  The changes are really minor and won't affect anything normally  |
+|  candide | pragma- | @about/c/bot/candide- | Another featureful bot writen in perl with lots of features. https://github.com/pragma-/pbot |
 
 # Special bots
 
