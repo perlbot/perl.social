@@ -2,7 +2,7 @@
 
 echo Checking event \[${GITHUB_EVENT_NAME}\] and \[${GITHUB_REF} == ${SITE_BRANCH} \]
 
-if [[ ${GITHUB_EVENT_NAME} == "push" && ${GITHUB_REF} == ${SITE_BRANCH} ]]; then
+if [[ ${GITHUB_EVENT_NAME} == "push" && ${GITHUB_REF} == "refs/heads/${SITE_BRANCH}" ]]; then
   echo Running deploy job
   git stash -u
   cd site/
