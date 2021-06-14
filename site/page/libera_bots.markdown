@@ -14,3 +14,12 @@ title: Libera project list of known bots
 |  meatbot  |  simcop2387  |  @perlbot/bot/simcop2387/meatbot  |  An alternate name for metabot that will be used for dev versions/work for the time being, but eventually as an alternate nick for expanding to more channels  |
 |  farnsworth  |  simcop2387  |  @perlbot/bot/simcop2387/farnsworth  |  A bot that speaks only [Language::Farnsworth](https://metacpan.org/pod/Language::Farnsworth)  |
 |  cubert  |  simcop2387  |  @perlbot/bot/simcop2387/cubert  |  A similar bot to farnsworth that speaks a slightly updated version of [Language::Farnsworth](https://metacpan.org/pod/Language::Farnsworth).  The changes are really minor and won't affect anything normally  |
+
+# Special bots
+
+This is listed here as they're not normal bots, usually just relay bots, maybe should color them differently in the above table?
+
+| bot | owner | cloak | purpose |
++=============================+
+| perlbot-lo | simcop2387 | @perlbot/relay/oftc/simcop2387 | Relays between Libera #perl-oftc and OFTC #perl.  To help provide a better experience for OFTC #perl users. |
+
