@@ -102,10 +102,9 @@ theme:
 # deploy: These are the settings for the site's deploy. See Statocles::Deploy::File
 # for a full list of attributes and what they do.
 deploy:
-    $class: 'My::Statocles::Deploy::Git'
-    args:
-        base_url: https://perlbot.github.io/
-        path: '/'
+    $class: 'Statocles::Deploy::File'
+    path: '../rendered/'
+    base_url: https://perlbot.github.io/
 
 #----------------------------------------------------------------------------
 # Applications

@@ -10,6 +10,8 @@ on:
 
 jobs:
   perl-job:
+    env:
+      GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
     runs-on: ['ubuntu-latest']
     container:
       image: perl
