@@ -285,8 +285,16 @@ footer .tagline {
 /************************************************
  * Reponsive
  */
-@media ( max-width: 549px ) {
+@media ( max-width: 768px ) {
     .column, .columns {
         margin-left: 0;
     }
 }
+
+tr:nth-child(odd) {background: #FFF}
+tr:nth-child(even) {background: #DDD}
+th {background: #EEE; border-bottom: 1px solid #777;}
+table {border: 1px solid #AAA; }
+tr, td {border: none}
+td:first-child, th:first-child {padding-left: 0.5em}
+td:last-child, th:last-child {padding-right: 0.5em}
