@@ -10,13 +10,13 @@ if [[ ${GITHUB_EVENT_NAME} == "push" && ${GITHUB_REF} == "refs/heads/${SITE_BRAN
   (
   	cd rendered/
 	git fetch --all
-	git symbolic-ref HEAD refs/heads/${SITE_BRANCH}
+	git symbolic-ref HEAD refs/heads/${PUBLISH_BRANCH}
 	git reset --hard HEAD
 	rm -vr *
 	git clean -fd
   )
   (cd site/ && statocles deploy)
-  (cd rendered/ && git add -A && git commit -m "Update gh-pages: ${GIT_COMMIT_MESSAGE}" && git push --force origin ${SITE_BRANCH} )
+  (cd rendered/ && git add -A && git commit -m "Update gh-pages: ${GIT_COMMIT_MESSAGE}" && git push --force origin ${PUBLISH_BRANCH} )
 else
   echo Not a push to the site branch, not deploying
 fi
