@@ -30,7 +30,7 @@ site:
     $class: 'My::Statocles::Site'
 
     # title: This is the title of the site, shown in the <title> tag
-    title: 'Perlbot open source project'
+    title: 'Metabot - Fresh logs from the freezer'
 
     # base_url: This is the base URL the site will be deployed to. It
     # should be a full URL, and may contain a path, like:
@@ -39,7 +39,7 @@ site:
     #
     # If the base_url contains a path, all internal links will be
     # rewritten appropriately.
-    base_url: 'https://perlbot.github.io/'
+    base_url: 'https://www.meat.bot/'
 
     # apps: These are the applications in this site. The name of the app,
     # "blog", "page", or "static", is used to refer to it in commands.
@@ -104,7 +104,7 @@ theme:
 deploy:
     $class: 'Statocles::Deploy::File'
     path: '../rendered/'
-    base_url: https://perlbot.github.io/
+    base_url: https://www.meat.bot/
 
 #----------------------------------------------------------------------------
 # Applications
