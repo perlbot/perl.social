@@ -7,6 +7,7 @@ export PATH=$PWD/local/bin${PATH:+:$PATH}
 source .env
 export PUBLISH_BRANCH
 export SITE_BRANCH
+export CNAME
 
 cd site
 statocles daemon

@@ -7,7 +7,8 @@ export PATH=$PWD/local/bin${PATH:+:$PATH}
 source .env
 export PUBLISH_BRANCH
 export SITE_BRANCH
+export CNAME
 
-mkdir rendered/
+mkdir -p rendered/
 cd site
 statocles deploy
