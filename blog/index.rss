@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Metabot - Fresh logs from the freezer</title>
+        <link>https://www.meat.bot/blog/</link>
+        <atom:link href="https://www.meat.bot/blog/index.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of Metabot - Fresh logs from the freezer</description>
+        <generator>Statocles 0.098</generator>
+        <item>
+            <title>First Post</title>
+            <link>https://www.meat.bot/blog/2021/06/02/first-post/</link>
+            <guid>https://www.meat.bot/blog/2021/06/02/first-post/</guid>
+            <description><![CDATA[
+                <h1>Welcome To Your Blog
+</h1><p>This is your first post. To edit this post, open up /blog/2021/06/02/first-post/index.markdown
+in your text editor.
+</p><p><a href="http://preaction.me/statocles/pod/Statocles/Help/Content">Check the documentation for how to write Statocles
+content</a>
+</p>
+
+
+            ]]></description>
+            <pubDate>
+                Wed, 02 Jun 2021 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

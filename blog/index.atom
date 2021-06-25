@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.meat.bot/blog/</id>
+    <title>Metabot - Fresh logs from the freezer</title>
+    <updated>2021-06-02T00:00:00Z</updated>
+    <link href="https://www.meat.bot/blog/index.atom" rel="self" />
+    <link href="https://www.meat.bot/blog/" rel="alternate" />
+    <generator version="0.098">Statocles</generator>
+
+    <entry>
+        <id>https://www.meat.bot/blog/2021/06/02/first-post/</id>
+        <title>First Post</title>
+        <link href="https://www.meat.bot/blog/2021/06/02/first-post/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <h1>Welcome To Your Blog
+</h1><p>This is your first post. To edit this post, open up /blog/2021/06/02/first-post/index.markdown
+in your text editor.
+</p><p><a href="http://preaction.me/statocles/pod/Statocles/Help/Content">Check the documentation for how to write Statocles
+content</a>
+</p>
+
+
+        ]]></content>
+        <updated>2021-06-02T00:00:00Z</updated>
+    </entry>
+</feed>
+
