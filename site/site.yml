@@ -44,6 +44,9 @@ site:
     # apps: These are the applications in this site. The name of the app,
     # "blog", "page", or "static", is used to refer to it in commands.
     apps:
+        cname:
+          $class: 'My::Statocles::CNAME'
+          url_root: '/'
 
         # blog: This is the blog app
         blog:
