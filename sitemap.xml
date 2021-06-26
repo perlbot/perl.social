@@ -4,7 +4,7 @@
         <loc>https://www.meat.bot/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2021-06-25</lastmod>
+        <lastmod>2021-06-26</lastmod>
     </url>
     <url>
         <loc>https://www.meat.bot/blog/</loc>
@@ -17,18 +17,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <lastmod>2021-06-02</lastmod>
-    </url>
-    <url>
-        <loc>https://www.meat.bot/page/libera_bots.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <lastmod>2021-06-25</lastmod>
-    </url>
-    <url>
-        <loc>https://www.meat.bot/page/libera_project.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <lastmod>2021-06-25</lastmod>
     </url>
 </urlset>
 
