@@ -1,4 +1,4 @@
-Sitemap: https://www.meat.bot/sitemap.xml
+Sitemap: https://perl.social/sitemap.xml
 User-Agent: *
 Disallow:
 
